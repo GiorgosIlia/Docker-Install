@@ -1,27 +1,38 @@
-# Docker Installation Script
+# Docker Installation Script for Ubuntu
 
-This script automates the installation process for Docker on Ubuntu-based systems. It performs the following steps:
+## Introduction
+This script automates the installation process for Docker on Ubuntu-based systems. Docker is a platform for developing, shipping, and running applications using containerization technology.
 
-1. Removes existing Docker-related packages if any.
-2. Updates the package list.
-3. Installs necessary prerequisites including ca-certificates, curl, and gnupg.
-4. Creates a directory for apt keyrings.
-5. Downloads Docker's official GPG key and stores it in the keyring directory.
-6. Sets appropriate permissions for the GPG key file.
-7. Installs Docker CE, Docker CLI, Containerd, Docker Buildx Plugin, and Docker Compose Plugin.
-8. Restarts the Docker service.
+## Prerequisites
+- This script is intended for use on Ubuntu-based systems.
+- Ensure you have sudo privileges to execute the script.
+- It's recommended to run the script on a fresh installation of Ubuntu.
 
 ## Usage
-
 1. Clone or download this repository to your Ubuntu-based system.
-2. Make sure the script `install_docker.sh` is executable by running `chmod +x install_docker.sh`.
-3. Execute the script with sudo privileges: `sudo ./install_docker.sh`.
-4. Follow the on-screen prompts and wait for the installation to complete.
+2. Navigate to the directory containing the script (`install_docker.sh`).
+3. Make the script executable by running:
+   ```
+   chmod +x install_docker.sh
+   ```
+4. Execute the script with sudo privileges:
+   ```
+   sudo ./install_docker.sh
+   ```
+5. Follow the on-screen prompts to complete the installation process.
+
+## What Does the Script Do?
+- Removes existing Docker-related packages, if any.
+- Updates the package list to ensure the latest versions are available.
+- Installs necessary prerequisites such as ca-certificates, curl, and gnupg.
+- Sets up Docker's official GPG key for package verification.
+- Installs Docker CE, Docker CLI, Containerd, Docker Buildx Plugin, and Docker Compose Plugin.
+- Restarts the Docker service to apply changes.
 
 ## Notes
+- Ensure you understand the implications of each step before executing the script.
+- After installation, Docker should be ready for use. You can verify the installation by running `docker --version`.
+- For further information and advanced usage of Docker, refer to the official Docker documentation: [https://docs.docker.com/](https://docs.docker.com/)
 
-- This script assumes you are using an Ubuntu-based system.
-- Make sure you have sudo privileges to execute the script.
-- After installation, Docker should be up and running, ready for use.
-- Please ensure you understand the implications of each step before executing the script.
-
+## Feedback
+If you encounter any issues or have suggestions for improvement, feel free to open an issue or submit a pull request on GitHub.
